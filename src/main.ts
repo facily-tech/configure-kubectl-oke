@@ -40,7 +40,7 @@ async function getKubectl(version: string): Promise<string> {
 async function configureKubectl(): Promise<void> {
   if (!fs.existsSync(path.join(os.homedir(), '.oci-cli-installed'))) {
     core.startGroup('Installing Oracle Cloud Infrastructure CLI');
-    await exec.exec('python -m pip install oci-cli');
+    await exec.exec('python -m pip install oci-cli==3.37.1');
     fs.writeFileSync(path.join(os.homedir(), '.oci-cli-installed'), 'success');
     core.endGroup();
   }
