@@ -65457,7 +65457,7 @@ function configureKubectl() {
     return __awaiter(this, void 0, void 0, function* () {
         if (!fs__WEBPACK_IMPORTED_MODULE_0__.existsSync(path__WEBPACK_IMPORTED_MODULE_2__.join(os__WEBPACK_IMPORTED_MODULE_1__.homedir(), '.oci-cli-installed'))) {
             _actions_core__WEBPACK_IMPORTED_MODULE_3__.startGroup('Installing Oracle Cloud Infrastructure CLI');
-            yield _actions_exec__WEBPACK_IMPORTED_MODULE_4__.exec('python -m pip install oci-cli');
+            yield _actions_exec__WEBPACK_IMPORTED_MODULE_4__.exec('python -m pip install oci-cli==3.37.1');
             fs__WEBPACK_IMPORTED_MODULE_0__.writeFileSync(path__WEBPACK_IMPORTED_MODULE_2__.join(os__WEBPACK_IMPORTED_MODULE_1__.homedir(), '.oci-cli-installed'), 'success');
             _actions_core__WEBPACK_IMPORTED_MODULE_3__.endGroup();
         }
